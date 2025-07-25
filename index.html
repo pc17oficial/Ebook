@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IA Cash Starter</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -14,7 +14,7 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 2rem;
     }
@@ -34,16 +34,28 @@
     .btn:hover {
       background-color: #eab308;
     }
-    .image {
+    .image, .testimonials, .faq {
       text-align: center;
       margin: 2rem 0;
     }
-    .image img {
+    .image img, .testimonial img {
       max-width: 100%;
       border-radius: 12px;
     }
-    .benefits li {
+    .benefits li, .faq li {
       margin-bottom: 1rem;
+    }
+    .testimonial {
+      background-color: #161b22;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
     }
     footer {
       text-align: center;
@@ -51,15 +63,26 @@
       font-size: 0.875rem;
       color: #aaa;
     }
+    .guarantee {
+      background-color: #161b22;
+      padding: 1rem;
+      border-left: 4px solid #facc15;
+      margin: 2rem 0;
+    }
+    .bonus {
+      background-color: #1f2937;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Descubra Como Ganhar Dinheiro com Inteligência Artificial Mesmo Sem Saber Nada</h1>
-    <p>Com o guia <strong>IA Cash Starter</strong>, você começa ainda hoje!</p>
-
+    <h1>IA Cash Starter</h1>
+    <p><strong>Descubra Como Ganhar Dinheiro com Inteligência Artificial Mesmo Sem Saber Nada</strong></p>
     <div class="image">
-      <img src="https://via.placeholder.com/500x300.png?text=Capa+do+eBook" alt="Capa do IA Cash Starter">
+      <img src="https://via.placeholder.com/500x300.png?text=Capa+do+IA+Cash+Starter" alt="Capa do eBook">
     </div>
 
     <h2>O que você vai aprender:</h2>
@@ -72,26 +95,58 @@
 
     <h2>Você vai receber:</h2>
     <ul class="benefits">
-      <li>Ὅ6 Ebook completo passo a passo</li>
+      <li>📖 Ebook completo passo a passo</li>
       <li>✨ Ideias reais e aplicáveis</li>
       <li>⚡ Exemplos e imagens para usar agora</li>
     </ul>
 
-    <h2>Depoimento de quem já comprou:</h2>
-    <blockquote style="background-color:#161b22;padding:1rem;border-left:4px solid #facc15;">
-      "Consegui ganhar R$50.000 em apenas 2 semanas com o IA Cash Starter!"<br><strong>- Lucas M.</strong>
-    </blockquote>
+    <div class="bonus">
+      <h3>Bônus Exclusivos:</h3>
+      <ul>
+        <li>🔗 Checklist com ferramentas de IA</li>
+        <li>📅 Mini-roteiro para TikTok Ads</li>
+      </ul>
+    </div>
 
-    <h2>Garantia 7 Dias</h2>
-    <p>Se você não gostar do material, devolvemos 100% do seu dinheiro.</p>
+    <div class="guarantee">
+      <h3>Garantia Incondicional de 7 Dias</h3>
+      <p>Se você não gostar do material, devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+    </div>
+
+    <h2>O que dizem nossos compradores:</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="https://via.placeholder.com/60" alt="Foto 1">
+        <p>"Consegui ganhar R$50.000 em apenas 2 semanas com o IA Cash Starter!"<br><strong>- Lucas M.</strong></p>
+      </div>
+      <div class="testimonial">
+        <img src="https://via.placeholder.com/60" alt="Foto 2">
+        <p>"Nunca tinha usado IA na vida. Agora gero uma renda extra de R$300 por semana!"<br><strong>- Bianca S.</strong></p>
+      </div>
+      <div class="testimonial">
+        <img src="https://via.placeholder.com/60" alt="Foto 3">
+        <p>"Achei que fosse enrolação, mas funciona mesmo. Recomendo demais."<br><strong>- Rafael T.</strong></p>
+      </div>
+    </div>
+
+    <h2>Sobre a Equipe IA Cash Starter</h2>
+    <p>Somos uma equipe de especialistas que acredita no poder da inteligência artificial para transformar a vida de pessoas comuns. Criamos este guia para ajudar você a dar os primeiros passos e gerar renda de forma simples e acessível.</p>
+
+    <h2>Dúvidas Frequentes</h2>
+    <ul class="faq">
+      <li><strong>Preciso saber programar?</strong> Não. Tudo é explicado para iniciantes.</li>
+      <li><strong>Vou precisar investir mais dinheiro depois?</strong> Não, tudo pode ser feito com ferramentas gratuitas.</li>
+      <li><strong>O pagamento é seguro?</strong> Sim, através da plataforma Stripe.</li>
+    </ul>
 
     <div style="text-align:center;margin:2rem 0;">
-      <a href="https://buy.stripe.com/test_3cIeVe1xc9mr4oSf0M0VO00" class="btn">QUERO COMPRAR POR R$99</a>
+      <a href="https://buy.stripe.com/test_fake_checkout_link" class="btn">QUERO COMPRAR POR R$99</a>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #bbb;">Pagamento 100% seguro via Stripe</p>
     </div>
 
     <footer>
-      Pagamento 100% seguro via Stripe.<br>
-      Suporte por email após a compra.
+      Copyright &copy; 2025 Equipe IA Cash Starter.<br>
+      Todos os direitos reservados.
     </footer>
   </div>
 </body>
