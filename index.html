@@ -13,6 +13,20 @@
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
       scroll-behavior: smooth;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
     .container {
       max-width: 900px;
@@ -113,16 +127,16 @@
 </head>
 <body>
   <div class="container">
-    <div class="header">
+    <div class="header reveal">
       <img src="/logo.png" alt="IA Cash Starter" class="logo">
     </div>
 
-    <h1 class="title">IA Cash Starter</h1>
-    <p class="subtitle">Transforme seu celular em uma máquina de dinheiro usando inteligência artificial – mesmo sem experiência!</p>
+    <h1 class="title reveal">IA Cash Starter</h1>
+    <p class="subtitle reveal">Transforme seu celular em uma máquina de dinheiro usando inteligência artificial – mesmo sem experiência!</p>
 
-    <a class="cta-button" href="https://buy.stripe.com/28EfZaecLbq4aEQbIZ8bS00">🚀 QUERO O EBOOK POR R$99</a>
+    <a class="cta-button reveal" href="https://buy.stripe.com/28EfZaecLbq4aEQbIZ8bS00">🚀 QUERO O EBOOK POR R$99</a>
 
-    <div class="section">
+    <div class="section reveal">
       <h2>📘 O que você vai aprender:</h2>
       <ul>
         <li>Ferramentas de IA que geram dinheiro</li>
@@ -133,11 +147,11 @@
       </ul>
     </div>
 
-    <blockquote>
+    <blockquote class="reveal">
       "Você não precisa ser um expert. Precisa começar."
     </blockquote>
 
-    <div class="section">
+    <div class="section reveal">
       <h2>📖 O que tem dentro do eBook:</h2>
       <ul>
         <li>Capítulo 1: O que é IA e como ganhar com ela</li>
@@ -148,7 +162,7 @@
       </ul>
     </div>
 
-    <div class="section">
+    <div class="section reveal">
       <h2>💬 O que estão dizendo:</h2>
       <div class="testimonial">
         <p>“Comprei por curiosidade. Em 1 semana fiz R$300 usando uma ferramenta do eBook.”</p>
@@ -164,15 +178,29 @@
       </div>
     </div>
 
-    <blockquote>
+    <blockquote class="reveal">
       "Você pode continuar onde está ou dar o primeiro passo para a mudança."
     </blockquote>
 
-    <a class="cta-button" href="https://buy.stripe.com/28EfZaecLbq4aEQbIZ8bS00">💸 SIM, EU QUERO O EBOOK AGORA</a>
+    <a class="cta-button reveal" href="https://buy.stripe.com/28EfZaecLbq4aEQbIZ8bS00">💸 SIM, EU QUERO O EBOOK AGORA</a>
 
     <footer>
       &copy; 2025 IA Starter. Todos os direitos reservados.
     </footer>
   </div>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        }
+      }
+    });
+  </script>
 </body>
 </html>
