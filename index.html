@@ -13,11 +13,30 @@
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
       scroll-behavior: smooth;
-      animation: fadeIn 1.2s ease-in-out;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0f0f0f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .loader img {
+      width: 80px;
+      height: 80px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .hidden {
+      display: none;
     }
     .reveal {
       opacity: 0;
@@ -126,7 +145,10 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="loader" id="loader">
+    <img src="/logo.png" alt="Loading...">
+  </div>
+  <div class="container hidden" id="mainContent">
     <div class="header reveal">
       <img src="/logo.png" alt="IA Cash Starter" class="logo">
     </div>
@@ -188,7 +210,6 @@
       &copy; 2025 IA Starter. Todos os direitos reservados.
     </footer>
   </div>
-
   <script>
     const reveals = document.querySelectorAll('.reveal');
     window.addEventListener('scroll', () => {
@@ -200,6 +221,13 @@
           reveals[i].classList.add('active');
         }
       }
+    });
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('hidden');
+        document.getElementById('mainContent').classList.remove('hidden');
+      }, 2000);
     });
   </script>
 </body>
